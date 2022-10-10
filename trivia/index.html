@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What Is The Best Movie Of All Time?</h3>
+                <form class="first-qu">
+                    <button  class="wrong" onclick="check(event)"> The Godfather </button>
+                    <button  class="wrong" onclick="check(event)"> Shawshank Redemption </button>
+                    <button  class="right" onclick="check(event)"> Cats </button>
+                    <div class="message"></div>
+                </form>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What Is The Best Thing That Happened To Cats Since Dogs?</h3>
+                <form>
+                    <input type="text">
+                    <button class="free-ans">Check Answer</button>
+                    <div class="message2"></div>
+                </form>
+            </div>
+        </div>
+
+
+        <script>
+            // First question
+
+            function check (e){
+                let trigredObj = event.srcElement;
+                let eleClassName = event.target.className;
+                let color;
+                let text;
+                let messageColor;
+                let newDiv = document.createElement('div');
+                let firstForm = document.querySelector('.first-qu');
+                let message = document.querySelector('.message');
+                if(eleClassName === "right"){
+                    color = "green";
+                    text = "Correct!";
+                    messageColor = "#51a351";
+                }
+                else{
+                    color = "red";
+                    text = "Incorrect";
+                    messageColor = "#de4636";
+                }
+                firstForm.appendChild(newDiv);
+                trigredObj.style.backgroundColor = color;
+                document.querySelector(".message").innerHTML = text;
+                message.classList.add("theMessage");
+                message.style.backgroundColor = messageColor;
+                e.preventDefault();
+
+            }
+            // Second question
+            let freeAns = document.querySelector('.free-ans');
+            let message2 = document.querySelector('.message2');
+            freeAns.addEventListener('click', function (e){
+                let input = document.querySelector('input');
+                let answer = input.value;
+                answer = answer.toLowerCase();
+                if(answer === "cats movie"){
+                    text = "Correct!";
+                    messageColor = "#51a351";
+                    color = "green";
+                }
+                else{
+                    text = "Incorrect";
+                    messageColor = "#de4636";
+                    color = "red";
+                }
+                document.querySelector(".message2").innerHTML = text;
+                message2.classList.add("theMessage");
+                message2.style.backgroundColor = messageColor;
+                inpu.style.backgroundColor = color;
+                e.preventDefault();
+            });
+
+            // let message = document.querySelector('.message');
+
+            // let rightText = "Correct!";
+            // let right = document.querySelector('.right');
+            // right.addEventListener('click', function (e){
+            //       right.style.backgroundColor = 'green';
+            //       document.querySelector(".message").innerHTML = rightText;
+            //       message.classList.add("theMessage");
+            //       message.style.backgroundColor = "#51a351";
+            //       e.preventDefault();
+            //     });
+
+            // let wrongText = "InCorrect";
+            // let wrong = document.querySelector('.wrong');
+            // wrong.addEventListener('click', function (e){
+            //       wrong.style.backgroundColor = 'red';
+            //       document.querySelector(".message").innerHTML = wrongText;
+            //       message.classList.add("theMessage");
+            //       message.style.backgroundColor = "#de4636";
+            //       e.preventDefault();
+            //     });
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+main {
+    position: relative;
+}
+.card {
+    width: 36%;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.list{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.card-text{
+    margin-top: 20px;
+
+}

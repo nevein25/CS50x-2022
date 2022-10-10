@@ -1,0 +1,33 @@
+main {
+  position: relative ;
+  color: white;
+}
+table {
+  border-collapse: collapse;
+  width:70%;
+  border-radius: 5px 5px 0 0;
+	box-shadow: 0 0 28px rgba(0,0,0,0.15);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+th {
+  border: 1px solid #333333;
+  padding: 15px;
+
+}
+td {
+  border: 1px solid #333333;
+  text-align: left;
+  padding: 10px;
+
+}
+
+tr:nth-child(even) {
+  background-color: #7d786f;
+}
+tr:nth-child(odd) {
+  background-color: #54534f;
+}

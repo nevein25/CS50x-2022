@@ -1,0 +1,10 @@
+.card-group{
+    margin: 114px;
+}
+.card {
+    margin: 10px;
+}
+a, a:hover{
+    text-decoration: none;
+    color: inherit;
+}

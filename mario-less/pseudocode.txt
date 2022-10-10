@@ -1,0 +1,5 @@
+Take height from the user
+If height is not greater than 0 and less than 9 go back one step
+Iteration for number of lines from 1 to height
+    Iteration for number of spaces from height-1 to 0
+    Iteration for number of # from 1 to line number
